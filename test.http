@@ -1,0 +1,18 @@
+POST http://localhost:7777/event
+Content-Type: application/json
+
+{"key" : "value", "list": [1, 2, 3]}
+
+###
+POST http://localhost:7777/event
+--data-binary: @HELP.md
+Content-Type: application/octet-stream
+
+###
+# curl -i -X POST --header "Content-Type:application/octet-stream" --header --data-binary @myfile.pdf  https://some-host/some-url
+POST https://some-host/some-url
+
+Content-Type: application/octet-stream
+
+###
+
